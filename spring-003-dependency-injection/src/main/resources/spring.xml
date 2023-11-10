@@ -5,12 +5,13 @@
 
 <!--    配置dao-->
     <bean id="userDaoBean" class="com.w.spring6.dao.UserDao"/>
-
 <!--    配置service-->
     <bean id="userServiceBean" class="com.w.spring6.service.UserService">
+           <!--set注入-->
            <!--ref后面指定的是要注入的bean的id-->
            <!--一般name位置写属性名就行了-->
     <property name="userDao" ref="userDaoBean"/>
+
 <!--        <property name="vipDao" ref="vipDaoBean"/>-->
         <property name="abc" ref="vipDaoBean"/>
 
@@ -18,4 +19,18 @@
 
     <bean id="vipDaoBean" class="com.w.spring6.dao.VipDao"/>
 
+
+
+    <bean id="orderDaoBean" class="com.w.spring6.dao.OrderDao"/>
+    <bean id="orderServiceBean" class="com.w.spring6.service.OrderService">
+        <!--构造注入-->
+        <!--index="0"表示构造方法的第一个参数，将orderDaoBean对象传递给构造方法的第一个参数。-->
+        <constructor-arg index="0" ref="orderDaoBean"/>
+        <!--也可以使用参数的名字-->
+<!--        <constructor-arg name="orderDao" ref="orderDaoBean"/>-->
+    </bean>
+
+
+
 </beans>
+

@@ -18,4 +18,11 @@
 
     <bean id="vipDaoBean" class="com.w.spring6.dao.VipDao"/>
 
+    <bean id="orderDaoBean" class="com.w.spring6.dao.OrderDao"/>
+    <bean id="orderServiceBean" class="com.w.spring6.service.OrderService">
+        <!--index="0"表示构造方法的第一个参数，将orderDaoBean对象传递给构造方法的第一个参数。-->
+        <constructor-arg index="0" ref="orderDaoBean"/>
+    </bean>
+
 </beans>
+

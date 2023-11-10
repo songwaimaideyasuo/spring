@@ -4,6 +4,7 @@ import com.w.spring6.bean.QianDaYe;
 import com.w.spring6.bean.User;
 import com.w.spring6.jdbc.MyDataSource;
 import com.w.spring6.service.CustomerService;
+import com.w.spring6.service.OrderService;
 import com.w.spring6.service.UserService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -42,12 +43,12 @@ public class SpringDITest {
         System.out.println(user);
     }
 
-    @Test
-    public void testConstructorDI(){
-        ApplicationContext applicationContext=new ClassPathXmlApplicationContext("beans.xml");
-        CustomerService customerService=applicationContext.getBean("csBean", CustomerService.class);
-        customerService.save();
-    }
+//    @Test
+//    public void testConstructorDI(){
+//        ApplicationContext applicationContext=new ClassPathXmlApplicationContext("beans.xml");
+//        CustomerService customerService=applicationContext.getBean("csBean", CustomerService.class);
+//        customerService.save();
+//    }
 
     @Test
     public void testSetDI(){
@@ -55,4 +56,12 @@ public class SpringDITest {
         UserService userService=applicationContext.getBean("userServiceBean",UserService.class);
         userService.saveUser();
     }
+
+    @Test
+    public void testConstructorDI(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
+        OrderService orderServiceBean = applicationContext.getBean("orderServiceBean", OrderService.class);
+        orderServiceBean.delete();
+    }
+
 }
