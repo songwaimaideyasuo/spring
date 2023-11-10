@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userDaoBean" class="com.w.spring6.dao.UserDao"/>
+    <bean id="vipDaoBean" class="com.w.spring6.dao.VipDao"/>
+
+    <bean id="csBean" class="com.w.spring6.service.CustomerService">
+<!--        构造注入-->
+<!--        指定构造方法的第一个参数，下标0-->
+        <constructor-arg index="0" ref="userDaoBean"/>
+        <constructor-arg index="1" ref="vipDaoBean"/>
+    </bean>
+
+
+<!--    注入简单类型-->
+    <bean id="userBean" class="com.w.spring6.bean.User">
+            <property name="username" value="张三"/>
+            <property name="password" value="123"/>
+            <property name="age" value="20"/>
+    </bean>
+
+</beans>

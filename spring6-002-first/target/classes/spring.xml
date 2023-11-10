@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    这就是Spring的配置文件-->
+<!--    idea工具为我们提供了这个文件模板-->
+<!--    resource根目录下就相当于放到类目录下-->
+
+<!--    配置bean，spring才能帮助管理-->
+
+    <!--
+    id是bean的身份证号，不能重复，是唯一标识
+    class必须填写类的全路径（带包的类名）
+    -->
+    <bean id="userBean" class="com.w.spring6.dao.bean.User"/>
+    <bean id="userDaoBean" class="com.w.spring6.dao.dao.UserDaoImplForMySQL"/>
+
+    <bean id="nowTime" class="java.util.Date"/>
+</beans>
