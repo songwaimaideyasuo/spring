@@ -8,10 +8,13 @@ public class UserService {
     private UserDao userDao;
     private VipDao vipDao;
 
-    public void setAbc(VipDao vipDao){
+//    public void setAbc(VipDao vipDao){
+//        this.vipDao=vipDao;
+//    }
+
+    public void setVipDao(VipDao vipDao){
         this.vipDao=vipDao;
     }
-
 
     //set注入的话，必须提供一个set方法
     //spring容器会调用这个set方法，来给userDao赋值

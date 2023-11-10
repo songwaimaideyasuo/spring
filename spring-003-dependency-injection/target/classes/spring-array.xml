@@ -25,6 +25,8 @@
             </array>
         </property>
 
+
+
 <!--        这个数组不是简单类型-->
         <property name="womens">
             <array>
@@ -34,6 +36,8 @@
             </array>
 
         </property>
+
+
 
 
     </bean>

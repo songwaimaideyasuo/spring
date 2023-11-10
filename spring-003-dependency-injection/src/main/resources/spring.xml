@@ -12,8 +12,8 @@
            <!--一般name位置写属性名就行了-->
     <property name="userDao" ref="userDaoBean"/>
 
-<!--        <property name="vipDao" ref="vipDaoBean"/>-->
-        <property name="abc" ref="vipDaoBean"/>
+        <property name="vipDao" ref="vipDaoBean"/>
+<!--        <property name="abc" ref="vipDaoBean"/>-->
 
     </bean>
 

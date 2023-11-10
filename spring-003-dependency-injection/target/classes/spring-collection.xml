@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="peopleBean" class="com.w.spring6.bean.People">
+        <property name="names">
+            <list>
+                <value>铁锤</value>
+                <value>张三</value>
+                <value>张三</value>
+                <value>张三</value>
+                <value>狼</value>
+            </list>
+        </property>
+    </bean>
+</beans>
