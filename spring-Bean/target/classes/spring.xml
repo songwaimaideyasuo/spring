@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="vipBean" class="com.w.spring6.bean.VipFactory" factory-method="get"/>
+
+    <bean id="orderFactory" class="com.w.spring6.bean1.OrderFactory"/>
+    <bean id="orderBean" factory-bean="orderFactory" factory-method="get"/>
+
+    <bean id="personBean" class="com.w.spring6.bean2.PersonFactoryBean"/>
+
+</beans>
